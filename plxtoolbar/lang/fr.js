@@ -1,0 +1,22 @@
+lang={
+'L_TOOLBAR_PARAGRAPH'				: 'Paragraphe',
+'L_TOOLBAR_TITLE'					: 'Titre',
+'L_TOOLBAR_BOLD'					: 'Text en Gras',
+'L_TOOLBAR_ITALIC'					: 'Text en Italique',
+'L_TOOLBAR_UNDERLINE'				: 'Texte souligné',
+'L_TOOLBAR_STRIKE'					: 'Texte barré',
+'L_TOOLBAR_LINK_MSG'				: 'Veuillez entrer une adresse',
+'L_TOOLBAR_LINK'					: 'Lien',
+'L_TOOLBAR_BR'						: 'Retour à la ligne',
+'L_TOOLBAR_HR'						: 'Ligne horizontale',
+'L_TOOLBAR_UL'						: 'Liste à puce',
+'L_TOOLBAR_OL'						: 'Liste numérotée',
+'L_TOOLBAR_BLOCKQUOTE'				: 'Citation',
+'L_TOOLBAR_P_LEFT'					: 'Texte à gauche',
+'L_TOOLBAR_P_RIGHT'					: 'Texte à droite',
+'L_TOOLBAR_P_CENTER'				: 'Texte centré',
+'L_TOOLBAR_MEDIAS'					: 'Médias',
+'L_TOOLBAR_MEDIAS_TITLE'			: 'Gestionnaire de médias',
+'L_TOOLBAR_FULLSCREEN'				: 'Plein écran',
+'L_TOOLBAR_IMG_TITLE'				: 'Titre de l\'image'
+};
