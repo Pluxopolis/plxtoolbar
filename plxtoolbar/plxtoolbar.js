@@ -64,7 +64,7 @@ function _plxToolbar() {
 	<span class="icon-underline" onclick="plxToolbar.insert(\''+textarea+'\',\'<ins>\',\'<\/\ins>\')" title="'+lang.L_TOOLBAR_UNDERLINE+'"></span>\
 	<span class="icon-strikethrough" onclick="plxToolbar.insert(\''+textarea+'\',\'<strike>\',\'<\/\strike>\')"  title="'+lang.L_TOOLBAR_STRIKE+'"></span>\
 	<span class="icon-link" onclick="plxToolbar.insert(\''+textarea+'\',\'<a>\',\'<\/\a>\', \''+lang.L_TOOLBAR_LINK_MSG+'\', \'http://www.\')" title="'+lang.L_TOOLBAR_LINK+'"></span>\
-	<span class="icon-pagebreak" onclick="plxToolbar.insert(\''+textarea+'\',\'<hr>\\n\')" title="'+lang.L_TOOLBAR_LINK+'"></span>\
+	<span class="icon-pagebreak" onclick="plxToolbar.insert(\''+textarea+'\',\'<hr>\\n\')" title="'+lang.L_TOOLBAR_HR+'"></span>\
 	<span class="icon-list-numbered" onclick="plxToolbar.insert(\''+textarea+'\',\'<ol>\\n</li>\',\'<\/li>\\n<\/ol>\')" title="'+lang.L_TOOLBAR_OL+'"></span>\
 	<span class="icon-list2" onclick="plxToolbar.insert(\''+textarea+'\',\'<ul>\\n<li>\',\'<\/li>\\n<\/ul>\')" title="'+lang.L_TOOLBAR_UL+'"></span>\
 	<span class="icon-quotes-right" onclick="plxToolbar.insert(\''+textarea+'\',\'<blockquote>\',\'<\/blockquote>\')" title="'+lang.L_TOOLBAR_BLOCKQUOTE+'"></span>\
