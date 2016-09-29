@@ -32,6 +32,7 @@ function _plxToolbar() {
 				tag_close = '</p>';
 				break;
 			case "<img>":
+				tag_close = tag_close.replace(this.racine, "");
 				tag_open = '<img src="'+tag_close+'" alt="'+answer+'" />\n';
 				tag_close = '';
 				break;
@@ -95,7 +96,8 @@ function _plxToolbar() {
 		html.insertBefore(p,obj);
 
 	}
-	this.init = function(path_editor) {
+	this.init = function(path_editor, racine) {
+		this.racine = racine;
 		this.path_editor=path_editor;
 		var url = window.location.pathname;
 		var mini = '';

@@ -1,4 +1,5 @@
-## Version 1.4.1 (xx/xx/2016) ##
+## Version 1.4.1 (29/09/2016) ##
+[+] Lien relatif des images au lieu du lien absolu en http://
 BUG #1: mauvais libellé de la balise HR
 
 ## Version 1.4 (10/02/2016) ##

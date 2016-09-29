@@ -69,7 +69,7 @@ class plxtoolbar extends plxPlugin {
 		echo '<script src="'.$langfile.'"></script>'."\n";
 		echo "\n".'<script src="'.$this->plugPath.'plxtoolbar/plxtoolbar.js"></script>'."\n";
 		echo '<?php eval($plxAdmin->plxPlugins->callHook(\'plxToolbarCustomsButtons\', \'addCustomButtons\')); ?>'."\n";
-		echo '<script>plxToolbar.init(\''.$this->plugPath.'\');</script>'."\n";
+		echo '<script>plxToolbar.init(\''.$this->plugPath.'\',\''.plxUtils::getRacine().'\');</script>'."\n";
 	}
 
 }
