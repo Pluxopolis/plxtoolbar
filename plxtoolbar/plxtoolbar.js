@@ -43,8 +43,8 @@ function _plxToolbar() {
 
 		if(mini=='mini') {
 			var toolbar = '\
-	<span class="icon-bold" onclick="plxToolbar.insert(\''+textarea+'\',\'<strong>\',\'<\/\strong>\')" title="'+lang.L_TOOLBAR_BOLD+'"></span>\
-	<span class="icon-link" onclick="plxToolbar.insert(\''+textarea+'\',\'<a>\',\'<\/\a>\', \''+lang.L_TOOLBAR_LINK_MSG+'\', \'http://www.\')" title="'+lang.L_TOOLBAR_LINK+'"></span>\
+	<span class="tb-icon-bold" onclick="plxToolbar.insert(\''+textarea+'\',\'<strong>\',\'<\/\strong>\')" title="'+lang.L_TOOLBAR_BOLD+'"></span>\
+	<span class="tb-icon-link" onclick="plxToolbar.insert(\''+textarea+'\',\'<a>\',\'<\/\a>\', \''+lang.L_TOOLBAR_LINK_MSG+'\', \'http://www.\')" title="'+lang.L_TOOLBAR_LINK+'"></span>\
 ';
 		} else {
 			var toolbar = '\
@@ -59,21 +59,21 @@ function _plxToolbar() {
 		<option value="p">P</option>\
 		<option value="pre">Pre</option>\
 	</select>\
-	<span class="icon-pilcrow" onclick="plxToolbar.insert(\''+textarea+'\',\'<br \/>\\n\')" title="'+lang.L_TOOLBAR_BR+'"></span>\
-	<span class="icon-bold" onclick="plxToolbar.insert(\''+textarea+'\',\'<strong>\',\'<\/\strong>\')" title="'+lang.L_TOOLBAR_BOLD+'"></span>\
-	<span class="icon-italic" onclick="plxToolbar.insert(\''+textarea+'\',\'<em>\',\'<\/\em>\')" title="'+lang.L_TOOLBAR_ITALIC+'"></span>\
-	<span class="icon-underline" onclick="plxToolbar.insert(\''+textarea+'\',\'<ins>\',\'<\/\ins>\')" title="'+lang.L_TOOLBAR_UNDERLINE+'"></span>\
-	<span class="icon-strikethrough" onclick="plxToolbar.insert(\''+textarea+'\',\'<strike>\',\'<\/\strike>\')"  title="'+lang.L_TOOLBAR_STRIKE+'"></span>\
-	<span class="icon-link" onclick="plxToolbar.insert(\''+textarea+'\',\'<a>\',\'<\/\a>\', \''+lang.L_TOOLBAR_LINK_MSG+'\', \'http://www.\')" title="'+lang.L_TOOLBAR_LINK+'"></span>\
-	<span class="icon-pagebreak" onclick="plxToolbar.insert(\''+textarea+'\',\'<hr>\\n\')" title="'+lang.L_TOOLBAR_HR+'"></span>\
-	<span class="icon-list-numbered" onclick="plxToolbar.insert(\''+textarea+'\',\'<ol>\\n</li>\',\'<\/li>\\n<\/ol>\')" title="'+lang.L_TOOLBAR_OL+'"></span>\
-	<span class="icon-list2" onclick="plxToolbar.insert(\''+textarea+'\',\'<ul>\\n<li>\',\'<\/li>\\n<\/ul>\')" title="'+lang.L_TOOLBAR_UL+'"></span>\
-	<span class="icon-quotes-right" onclick="plxToolbar.insert(\''+textarea+'\',\'<blockquote>\',\'<\/blockquote>\')" title="'+lang.L_TOOLBAR_BLOCKQUOTE+'"></span>\
-	<span class="icon-paragraph-left" onclick="plxToolbar.insert(\''+textarea+'\',\'<left>\')" title="'+lang.L_TOOLBAR_P_LEFT+'"></span>\
-	<span class="icon-paragraph-center" onclick="plxToolbar.insert(\''+textarea+'\',\'<center>\')" title="'+lang.L_TOOLBAR_P_CENTER+'"></span>\
-	<span class="icon-paragraph-right" onclick="plxToolbar.insert(\''+textarea+'\',\'<right>\')" title="'+lang.L_TOOLBAR_P_RIGHT+'"></span>\
-	<span class="icon-images" onclick="mediasManager.openPopup(\''+textarea+'\', false, \'PLXTOOLBAR_fallback\')" title="'+lang.L_TOOLBAR_MEDIAS+'"></span>\
-	<span class="icon-new-tab" onclick="plxToolbar.toogleFullscreen(\''+textarea+'\')" title="'+lang.L_TOOLBAR_FULLSCREEN+'"></span>\
+	<span class="tb-icon-pilcrow" onclick="plxToolbar.insert(\''+textarea+'\',\'<br \/>\\n\')" title="'+lang.L_TOOLBAR_BR+'"></span>\
+	<span class="tb-icon-bold" onclick="plxToolbar.insert(\''+textarea+'\',\'<strong>\',\'<\/\strong>\')" title="'+lang.L_TOOLBAR_BOLD+'"></span>\
+	<span class="tb-icon-italic" onclick="plxToolbar.insert(\''+textarea+'\',\'<em>\',\'<\/\em>\')" title="'+lang.L_TOOLBAR_ITALIC+'"></span>\
+	<span class="tb-icon-underline" onclick="plxToolbar.insert(\''+textarea+'\',\'<ins>\',\'<\/\ins>\')" title="'+lang.L_TOOLBAR_UNDERLINE+'"></span>\
+	<span class="tb-icon-strikethrough" onclick="plxToolbar.insert(\''+textarea+'\',\'<strike>\',\'<\/\strike>\')"  title="'+lang.L_TOOLBAR_STRIKE+'"></span>\
+	<span class="tb-icon-link" onclick="plxToolbar.insert(\''+textarea+'\',\'<a>\',\'<\/\a>\', \''+lang.L_TOOLBAR_LINK_MSG+'\', \'http://www.\')" title="'+lang.L_TOOLBAR_LINK+'"></span>\
+	<span class="tb-icon-pagebreak" onclick="plxToolbar.insert(\''+textarea+'\',\'<hr>\\n\')" title="'+lang.L_TOOLBAR_HR+'"></span>\
+	<span class="tb-icon-list-numbered" onclick="plxToolbar.insert(\''+textarea+'\',\'<ol>\\n</li>\',\'<\/li>\\n<\/ol>\')" title="'+lang.L_TOOLBAR_OL+'"></span>\
+	<span class="tb-icon-list2" onclick="plxToolbar.insert(\''+textarea+'\',\'<ul>\\n<li>\',\'<\/li>\\n<\/ul>\')" title="'+lang.L_TOOLBAR_UL+'"></span>\
+	<span class="tb-icon-quotes-right" onclick="plxToolbar.insert(\''+textarea+'\',\'<blockquote>\',\'<\/blockquote>\')" title="'+lang.L_TOOLBAR_BLOCKQUOTE+'"></span>\
+	<span class="tb-icon-paragraph-left" onclick="plxToolbar.insert(\''+textarea+'\',\'<left>\')" title="'+lang.L_TOOLBAR_P_LEFT+'"></span>\
+	<span class="tb-icon-paragraph-center" onclick="plxToolbar.insert(\''+textarea+'\',\'<center>\')" title="'+lang.L_TOOLBAR_P_CENTER+'"></span>\
+	<span class="tb-icon-paragraph-right" onclick="plxToolbar.insert(\''+textarea+'\',\'<right>\')" title="'+lang.L_TOOLBAR_P_RIGHT+'"></span>\
+	<span class="tb-icon-images" onclick="mediasManager.openPopup(\''+textarea+'\', false, \'PLXTOOLBAR_fallback\')" title="'+lang.L_TOOLBAR_MEDIAS+'"></span>\
+	<span class="tb-icon-new-tab" onclick="plxToolbar.toogleFullscreen(\''+textarea+'\')" title="'+lang.L_TOOLBAR_FULLSCREEN+'"></span>\
 ';
 			if(this.customButtons.length>0) {
 				for(i=0;i<this.customButtons.length;i++){

@@ -1,3 +1,6 @@
+## Version 1.5 (29/01/2019) ##
+FIX: pas d'affichage des icones de la barre d'outils
+
 ## Version 1.4.1 (29/09/2016) ##
 [+] Lien relatif des images au lieu du lien absolu en http://
 BUG #1: mauvais libellé de la balise HR
