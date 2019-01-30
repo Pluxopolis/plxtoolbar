@@ -21,7 +21,7 @@ plxToolbar.addButton( {
 					':-s', ':p', 'LOL', 'mad', 'roll', '8-)', '8-O',
 					':$', 'twisted', '->', '!', '?'
 				),
-		icon : 'icon-happy',
+		icon : 'tb-icon-happy',
 		title : 'Smilies',
 
 		onclick : function(textarea) {

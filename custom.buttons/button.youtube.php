@@ -21,7 +21,7 @@ function get_url_param(param,url) {
 		return results[1];
 }
 plxToolbar.addButton( {
-		icon : 'icon-youtube',
+		icon : 'tb-icon-youtube',
 		title : 'Vid&eacute;o Youtube',
 		onclick : function() {
 			var url = prompt('Url de la video youtube', 'http://www.youtube.com/watch?v=');

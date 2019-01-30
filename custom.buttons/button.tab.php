@@ -11,7 +11,7 @@
 <script type="text/javascript">
 <!--
 plxToolbar.addButton( {
-		icon : 'pt-icon-long-arrow-right',
+		icon : 'tb-icon-long-arrow-right',
 		title : 'Ins&eacute;rer tabulation',
 		onclick : function() {
 			return '\t';

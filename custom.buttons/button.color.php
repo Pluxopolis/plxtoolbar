@@ -11,7 +11,7 @@
 <script type="text/javascript">
 <!--
 plxToolbar.addButton( {
-		icon : 'icon-flickr3',
+		icon : 'tb-icon-flickr3',
 		title : 'Couleur',
 		onclick : function(textarea) {
 			var color = prompt('Code couleur (exemple: #ffffff)', '');
