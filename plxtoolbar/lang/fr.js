@@ -1,8 +1,8 @@
 lang={
 'L_TOOLBAR_PARAGRAPH'				: 'Paragraphe',
 'L_TOOLBAR_TITLE'					: 'Titre',
-'L_TOOLBAR_BOLD'					: 'Text en Gras',
-'L_TOOLBAR_ITALIC'					: 'Text en Italique',
+'L_TOOLBAR_BOLD'					: 'Texte en Gras',
+'L_TOOLBAR_ITALIC'					: 'Texte en Italique',
 'L_TOOLBAR_UNDERLINE'				: 'Texte souligné',
 'L_TOOLBAR_STRIKE'					: 'Texte barré',
 'L_TOOLBAR_LINK_MSG'				: 'Veuillez entrer une adresse',

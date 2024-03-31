@@ -1,10 +1,11 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <document>
 	<title><![CDATA[plxToolbar]]></title>
-	<author><![CDATA[Stéphane F.]]></author>
-	<version>1.5.1</version>
-	<date>30/01/2019</date>
-	<site>http://pluxopolis.net</site>
+	<author><![CDATA[Stéphane F. Thomas I.]]></author>
+	<version>1.5.2</version>
+	<date>31/03/2024</date>
+	<site>https://pluxopolis.net</site>
 	<description><![CDATA[Barre d'outils html]]></description>
-	<requirements></requirements>	
+	<requirements></requirements>
+	<scope>admin</scope>
 </document>
