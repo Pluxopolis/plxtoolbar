@@ -34,12 +34,11 @@ plxToolbar.addButton( {
 			return '';
 		},
 		show : function(textarea) {
-			var obj = document.getElementById('id_'+textarea);
-			var p = document.createElement('p');
-			p.setAttribute("id","plxSmilies_"+textarea);
+			var obj = document.getElementById('plxtoolbar_'+textarea);
+			var p = document.createElement('i');
+			p.setAttribute('id','plxSmilies_'+textarea);
 			p.innerHTML = this.toolbar(textarea);
-			var html = obj.parentNode;
-			html.insertBefore(p,obj);
+			obj.insertBefore(p, obj.lastChild.nextSibling);
 		},
 		hide : function(textarea) {
 			var obj = document.getElementById('plxSmilies_'+textarea);
@@ -47,13 +46,13 @@ plxToolbar.addButton( {
 			html.removeChild(obj);
 		},
 		toolbar : function(textarea)  {
-			var s = '<div style="clear:both;float:left">';
+			var s = '<i style="text-align:right">';
 			for(i=0;i<(this.smilies.length-1);i++) {
 				icon = '<img src="<?php echo PLX_ROOT ?>plugins\/plxtoolbar\/custom.buttons\/smilies\/'+this.smilies[i]+'" \/>';
 				img = '<img src=&#34;plugins\/plxtoolbar\/custom.buttons\/smilies\/'+this.smilies[i]+'&#34; alt=&#34;'+this.alt[i]+'&#34; \/>';
 				s += '<a href="javascript:void(0)" onclick="plxToolbar.insert(\''+textarea+'\', \''+img+'\', \'\')">'+icon+'<\/a>';
 			}
-			s += '<\/div>';
+			s += '<\/i>';
 			return s;
 		}
 

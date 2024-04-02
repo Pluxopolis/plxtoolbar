@@ -66,7 +66,7 @@ function _plxToolbar() {
 	<span class="tb-icon-strikethrough" onclick="plxToolbar.insert(\''+textarea+'\',\'<strike>\',\'<\/\strike>\')"  title="'+lang.L_TOOLBAR_STRIKE+'"></span>\
 	<span class="tb-icon-link" onclick="plxToolbar.insert(\''+textarea+'\',\'<a>\',\'<\/\a>\', \''+lang.L_TOOLBAR_LINK_MSG+'\', \'http://www.\')" title="'+lang.L_TOOLBAR_LINK+'"></span>\
 	<span class="tb-icon-pagebreak" onclick="plxToolbar.insert(\''+textarea+'\',\'<hr>\\n\')" title="'+lang.L_TOOLBAR_HR+'"></span>\
-	<span class="tb-icon-list-numbered" onclick="plxToolbar.insert(\''+textarea+'\',\'<ol>\\n</li>\',\'<\/li>\\n<\/ol>\')" title="'+lang.L_TOOLBAR_OL+'"></span>\
+	<span class="tb-icon-list-numbered" onclick="plxToolbar.insert(\''+textarea+'\',\'<ol>\\n<li>\',\'<\/li>\\n<\/ol>\')" title="'+lang.L_TOOLBAR_OL+'"></span>\
 	<span class="tb-icon-list2" onclick="plxToolbar.insert(\''+textarea+'\',\'<ul>\\n<li>\',\'<\/li>\\n<\/ul>\')" title="'+lang.L_TOOLBAR_UL+'"></span>\
 	<span class="tb-icon-quotes-right" onclick="plxToolbar.insert(\''+textarea+'\',\'<blockquote>\',\'<\/blockquote>\')" title="'+lang.L_TOOLBAR_BLOCKQUOTE+'"></span>\
 	<span class="tb-icon-paragraph-left" onclick="plxToolbar.insert(\''+textarea+'\',\'<left>\')" title="'+lang.L_TOOLBAR_P_LEFT+'"></span>\
@@ -87,6 +87,7 @@ function _plxToolbar() {
 
 	this.addToolbar = function(textarea, origine, mini) {
 		var obj = document.getElementById('id_'+textarea);
+		if(!obj) return;/* Fix if other textarea is present : like pickyPasteInPluxml 07.09.2021 */
 		var p = document.createElement('p');
 		p.id = 'plxtoolbar_'+textarea;
 		p.setAttribute("class","plxtoolbar");
@@ -101,11 +102,13 @@ function _plxToolbar() {
 		this.path_editor=path_editor;
 		var url = window.location.pathname;
 		var mini = '';
-		if(url.match(new RegExp("comment.php","gi")))
+		if(url.match(new RegExp("comment(_new)?\.php","gi")))
 			mini='mini';
 		var textareas = document.getElementsByTagName("textarea");
 		for(var i=0;i<textareas.length;i++){
-			this.addToolbar(textareas[i].name,'article',mini);
+			if(textareas[i].name){
+				this.addToolbar(textareas[i].name,'article',mini);
+			}
 		}
 	}
 
@@ -139,22 +142,24 @@ function _plxToolbar() {
 	this.toogleFullscreen = function(textarea) {
 		var cible = document.getElementById('id_'+textarea);
 		if(cible.getAttribute('class').indexOf('p_fullscreen')<0) {
+			document.body.style.overflow = 'hidden';
 			this.height=cible.offsetHeight;
-			document.getElementById('plxtoolbar_'+textarea).setAttribute('class', 'plxtoolbar plxtoolbar_fullscreen');
 			cible.setAttribute('class', cible.getAttribute('class') + ' p_fullscreen');
-			cible.setAttribute('style', 'height:'+plxToolbar.getViewportHeight()+'px');
+			cible.setAttribute('style', 'height:'+plxToolbar.getViewportHeight(textarea)+'px');
+			document.getElementById('plxtoolbar_'+textarea).setAttribute('class', 'plxtoolbar plxtoolbar_fullscreen');
 		} else {
-			document.getElementById('plxtoolbar_'+textarea).setAttribute('class', 'plxtoolbar');
+			document.body.style.overflow = '';
 			cible.setAttribute('class', cible.getAttribute('class').replace(' p_fullscreen', ''));
 			cible.setAttribute('style', 'height:'+this.height+'px');
+			document.getElementById('plxtoolbar_'+textarea).setAttribute('class', 'plxtoolbar');
 		}
 	}
-	this.getViewportHeight = function() {
+	this.getViewportHeight = function(textarea) {
 		var height;
 		if (window.innerHeight!=window.undefined) height=window.innerHeight;
 		else if (document.compatMode=='CSS1Compat') height=document.documentElement.clientHeight;
 		else if (document.body) height=document.body.clientHeight;
-		return height-160;
+		return height-document.getElementById('plxtoolbar_'+textarea).offsetHeight;//40
 	}
 }
 

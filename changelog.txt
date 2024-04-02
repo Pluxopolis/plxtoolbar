@@ -1,3 +1,43 @@
+## Version 1.5.2 (31/03/2024) ##
+[+] AmÃ©lio HOOK getCustomsButtons + compat PluXml 5.9x (plxGlob)
+DE
+			$buttons = plxGlob::getInstance(self::$plugPath.'custom.buttons/');
+VERS
+			$buttons = plxGlob::getInstance(self::$plugPath.'custom.buttons/',!1,!0,'');#Fix 5.9RC2+
+Fix : downloadable font: Glyph bbox was incorrect (glyph ids 10 35 37) (font-family: "icomoon" style:normal weight:400 stretch:100 src index:1) source: http://localhost/pluxml/plugins/plxtoolbar/plxtoolbar/fonts/icomoon.ttf?lt99e
+
+CLASSE
+[+] public static $v = '?v=1.5.2'; pour MAJ du cache des navigateurs (liens js et css avec self::$v)
++	public static $plugPath = '';#PLX_PLUGINS.__CLASS__.'/';
++	public static $__lang = 'fr';#PLX_SITE_LANG;
++	public static function endHead()
++	public static function endBody()
+Fix pour gutuma + admin
+::: Constucteur : + if(defined('PLX_ADMIN') && !defined('PLX_GROOT')) {
+
+CSS :
+ Fix fullscreen
+ + url('fonts/icomoon.woff2?lt99e') format('woff2'),
+
+JS :
+UP Button smilies : div vers i + ID
+LANG FR : Typo
+
+plxtoolbar.js :
+ Fix : Numbered list code is wrong / Le code des listes numÃ©rotÃ©es n'est pas bon. Voir https://github.com/Pluxopolis/plxtoolbar/issues/2
+ pagebreak + />
+ Fix si autre textarea present : comme pickyPasteInPluxml 07.09.2021
+ Ajoute la barre si le textarea a un attribut name
+ UP toogleFullscreen & getViewportHeight
+ init toolbar regex (mini toolbar pour nouveau commentaire)
+DE
+		if(url.match(new RegExp("comment.php","gi")))
+VERS
+		if(url.match(new RegExp("comment(_new)?\.php","gi")))
+
+BUG TypeError: obj is null lorsqu'il y a des zone de texte sans nom ; plxtoolbar.js:95
+Ajout d'un if(textareas[i].name) : init
+
 ## Version 1.5.1 (30/01/2019) ##
 FIX: pas d'affichage des icones des custom buttons
 
@@ -6,18 +46,18 @@ FIX: pas d'affichage des icones de la barre d'outils
 
 ## Version 1.4.1 (29/09/2016) ##
 [+] Lien relatif des images au lieu du lien absolu en http://
-BUG #1: mauvais libellé de la balise HR
+BUG #1: mauvais libellÃ© de la balise HR
 
 ## Version 1.4 (10/02/2016) ##
-Compatibilité PluXml 5.5
-+ Utilisation du gestionnaire de médias de PluXml
-- Suppression des images .png, remplacées par une fonte
-- Suppresion des caractères de commentaires dans les fichiers .js
+CompatibilitÃ© PluXml 5.5
++ Utilisation du gestionnaire de mÃ©dias de PluXml
+- Suppression des images .png, remplacÃ©es par une fonte
+- Suppresion des caractÃ¨res de commentaires dans les fichiers .js
 + Optimisation du code
 + Refonte de l'aspect visuel de la barre d'outil
 + Bouton Youtube: code compatible html5 (suppression code object flash)
 
 ## Version 1.3 (15/07/2015) ##
-[+] Compatibilité PluXml 5.4
+[+] CompatibilitÃ© PluXml 5.4
 
 ## Version 1.2 (08/09/2011) ##
